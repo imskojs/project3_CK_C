@@ -1,0 +1,35 @@
+<ion-view id="walkthrough">
+    <ion-pane>
+        <ion-slide-box on-slide-changed="Walkthrough.slideHasChanged($index)">
+
+            <ion-slide>
+                <div class="box"><h1>blue</h1></div>
+            </ion-slide>
+
+            <ion-slide>
+                <div class="box"><h1>yellow</h1></div>
+            </ion-slide>
+
+            <ion-slide>
+                <div class="box"><h1>pink</h1></div>
+            </ion-slide>
+
+            <ion-slide class="last-slide" 
+                on-swipe-left="Walkthrough.goTo()"
+                nav-direction="forward"
+            >
+                <div class="box"><h1>pink</h1></div>
+            </ion-slide>
+
+        </ion-slide-box>
+
+        <h3 class="absolute skip-text" 
+            touched
+            ng-click="Walkthrough.goTo()"
+            nav-direction="forward"
+        >
+            SKIP
+        </h3>
+
+    </ion-pane>
+</ion-view>

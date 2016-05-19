@@ -1,0 +1,81 @@
+<ion-view id="main-home">
+    <div class="row row1">
+        <div class="col col-38 flex-v">
+            <span class="current-location">
+                {{ MainHome.currentLocation.korean }}
+            </span>
+        </div>
+        <div class="col col-15">
+            <i class="near-by"
+                touch
+            ></i>
+        </div>
+        <div class="col col-15">
+            <i class="select-loc"
+                touch
+            ></i>
+        </div>
+        <div class="col col-28">
+            <i class="order-by"
+                touch
+            ></i>
+        </div>
+    </div>
+
+
+    <div class="row row2">
+        <div class="col col-15 flex" choose>
+            <span> 전체 </span>
+        </div> 
+        <div class="col col-20 flex" choose>
+            <span> 외식/카페 </span>
+        </div> 
+        <div class="col col-21 flex" choose>
+            <span> 쇼핑/마트 </span>
+        </div> 
+        <div class="col col-19 flex" choose>
+            <span> 문화/레져 </span>
+        </div> 
+        <div class="col col-25 flex" choose>
+            <span> 자동차/기타 </span>
+        </div> 
+    </div>
+
+    <div class="row3 flex">
+        <div class="card-type-container">
+            <h4>카드별</h4>
+            <div>
+                <select 
+                    ng-options="cardType as cardType.korean for cardType in MainHome.cardTypes"
+                    ng-model="MainHome.userSelectedCardType"
+                    ng-change="MainHome.saveCardType(MainHome.userSelectedCardType)"
+                ></select>
+            </div>
+        </div>
+        <div class="category-type-container">
+            <h4>업종별</h4>
+            <div>
+                <select 
+                    ng-options="categoryType as categoryType.korean for categoryType in MainHome.categoryTypes"
+                    ng-model="MainHome.userSelectedCategoryType"
+                    ng-change="MainHome.saveCategoryType(MainHome.userSelectedCategoryType)"
+                ></select>
+            </div>
+        </div>
+        <div class="product-type-container">
+            <h4>상품별</h4>
+            <div>
+                <select
+                    ng-options="productType as productType.korean for productType in MainHome.productTypes"
+                    ng-model="MainHome.userSelectedProductType"
+                    ng-change="MainHome.saveProductType(MainHome.userSelectedProductType)"
+                ></select>
+            </div>
+        </div>
+        <i class="search-icon"
+            ng-click="MainHome.reqMatchingCardData()"
+        ></i>
+    </div>
+    <ion-content class="has-header has-footer home-content">
+    </ion-content>
+</ion-view>

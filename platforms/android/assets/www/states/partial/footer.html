@@ -1,0 +1,32 @@
+<ion-footer-bar id="main-footer" class="bar-positive"
+    ng-if="state.parent === 'main'"
+>
+  <div class="buttons row">
+    <div class="col flex" 
+        choose
+        ng-click="goTo('main.home')"
+        ng-class="{selected: state.current === 'home'}"
+    >
+        <i class="home-icon auto"></i>
+    </div>
+    <div class="col flex" 
+        choose
+        ng-class="{selected: state.current === 'myCard'}"
+    >
+        <i class="card-icon auto"></i>
+    </div>
+    <div class="col flex" 
+        choose
+        ng-click="goTo('main.membership')"
+        ng-class="{selected: state.current === 'membership'}"
+    >
+        <i class="member-icon auto"></i>
+    </div>
+    <div class="col flex" 
+        choose
+        ng-class="{selected: state.current === 'setting'}"
+    >
+        <i class="setting-icon auto"></i>
+    </div>
+  </div>
+</ion-footer-bar>

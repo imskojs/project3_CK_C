@@ -1,0 +1,122 @@
+<ion-modal-view id="main-membership-addCard-modal" class="addCard-modal">
+
+    <ion-header-bar align-title="center" class="bar-positive">
+      <div class="buttons">
+        <button class="button button-icon icon ion-android-arrow-back" 
+            ng-click="
+                MainMembership.addCardModal.hide();
+                MainMembership.resetAddCard();
+            "
+        >
+        </button>
+      </div>
+      <h1 class="title">멤버쉽 카드 등록</h1>
+    </ion-header-bar>
+
+    <ion-content>
+        <div class="addCard-content">
+            <div class="row select-color-row">
+                <div class="col select-color">
+                    <h4>카드 색상 선택</h4>
+                    <div class="color-buttons">
+                        <span class="color-button-wrapper selected"
+                            default
+                            choose
+                            ng-click="MainMembership.addCard.color = 'pinky'"
+                        >
+                            <span class="color-button-shadow">
+                                <span class="color-button color-button-pink"></span>
+                            </span>
+                        </span>
+                        <span class="color-button-wrapper"
+                            choose
+                            ng-click="MainMembership.addCard.color = 'blue'"
+                        >
+                            <span class="color-button-shadow">
+                                <span class="color-button color-button-blue"></span>
+                            </span>
+                        </span>
+                        <span class="color-button-wrapper"
+                            choose
+                            ng-click="MainMembership.addCard.color = 'orange'"
+                        >
+                            <span class="color-button-shadow">
+                                <span class="color-button color-button-orange"></span>
+                            </span>
+                        </span>
+                        <span class="color-button-wrapper"
+                            choose
+                            ng-click="MainMembership.addCard.color = 'plum'"
+                        >
+                            <span class="color-button-shadow">
+                                <span class="color-button color-button-plum"></span>
+                            </span>
+                        </span>
+                        <span class="color-button-wrapper"
+                            choose
+                            ng-click="MainMembership.addCard.color = 'purple'"
+                        >
+                            <span class="color-button-shadow">
+                                <span class="color-button color-button-purple"></span>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row card-name-row">
+                <div class="col">
+                    <h4>카드이름 입력</h4>
+                    <div><input type="text" placeholder="예) CJ One 멤버쉽 카드"
+                    ng-model="MainMembership.addCard.title"
+                    ></div>
+                </div>
+            </div>
+            <div class="row card-number-row">
+                <div class="col">
+                    <div class="row title">
+                        <div class="col">
+                            <h4>카드(바코드) 번호 입력</h4>
+                        </div>
+                    </div>
+                    <div class="row input-container">
+                        <div class="col col-60">
+                            <input type="number" placeholder="예) 4875 1029 1923 1818"
+                            ng-focus="MainMembership.addCard.barcode = false"
+                            ng-model="MainMembership.addCard.number"
+                            >
+                        </div>
+                        <div class="col flex generate"
+                            ng-click="MainMembership.addCard.barcode = true"
+                            touch
+                        >
+                            <span>바코드 생성</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row card-image-row">
+                <div class="col col-90 image-container auto">
+                    <div class="card-title flex-v {{ MainMembership.addCard.color }}"
+                    > {{ MainMembership.addCard.title }}</div>
+                    <div class="barcode-container flex">
+                        <img barcode number="{{MainMembership.addCard.number}}" ng-if="MainMembership.addCard.barcode">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row card-button-row">
+                <div class="col col-90 auto add-card-button flex"
+                    touch
+                    ng-click="MainMembership.saveNewCard();"
+                >
+                    <span>멤버쉽 카드 추가</span>
+                </div>
+            </div>
+
+        </div>
+    </ion-content>
+
+</ion-modal-view>
+    

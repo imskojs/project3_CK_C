@@ -1,0 +1,70 @@
+<ion-modal-view id="login-membership-modal" class="login-modal">
+    <div class="content">
+        <div class="row find-section">
+            <div class="col col-80 flex">
+                <span>회원 가입</span>
+            </div>
+            <div class="col flex">
+                <i class="close-icon"
+                    ng-click="Login.resetModal()"></i>
+            </div>
+        </div>
+
+        <div class="row dialog-section flex">
+            <div class="col col-80 text-container">
+                
+                <div class="row text-section">
+                    <div class="col">
+                        <span>
+                            이메일주소
+                        </span>
+                    </div>
+                </div>
+                <div class="row text-section input">
+                    <div class="col">
+                        <span>
+                            <input type="email" placeholder="Email Address">
+                        </span>
+                    </div>
+                </div>
+                <div class="row text-section">
+                    <div class="col">
+                        <span>
+                            비밀번호
+                        </span>
+                    </div>
+                </div>
+                <div class="row text-section input">
+                    <div class="col">
+                        <span>
+                            <input type="password" placeholder="Password">
+                        </span>
+                    </div>
+                </div>
+                <div class="row text-section">
+                    <div class="col">
+                        <span>
+                            비밀번호 확인
+                        </span>
+                    </div>
+                </div>
+                <div class="row text-section flex input">
+                    <div class="col">
+                        <span>
+                        <input type="password" placeholder="Confirm Password">
+                        </span>
+                    </div>
+                </div>
+
+                <div class="row button-section">
+                    <div class="col flex"
+                        touch
+                        ng-click="Login.requestMembership()"
+                    >
+                        <span>가입하기</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-modal-view>

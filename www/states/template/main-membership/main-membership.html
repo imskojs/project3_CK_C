@@ -1,0 +1,45 @@
+<ion-view id="membership">
+    <ion-content class="has-header has-footer">
+        <ion-list show-delete="MainMembership.canDelete">
+            <ion-item ng-repeat="membershipCard in MainMembership.membershipCards">
+                <ion-delete-button class="ion-minus-circled"
+                    ng-click="MainMembership.remove($index)"
+                >
+                </ion-delete-button>
+                <div class="row card-title {{membershipCard.color}}">
+                    <div class="col flex-v">
+                        <span>
+                            {{ membershipCard.korean }}
+                        </span>
+                    </div>
+                </div>
+                <div class="row barcode-container">
+                    <div class="col flex">
+                    <img barcode number="{{membershipCard.cardNumber}}">
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+    <ion-footer-bar class="bar-assertive bar-subfooter">
+        <div class="row row-100 sub-footer-menu">
+            <div class="col flex"
+                choose
+                toggle="true"
+                ng-click="MainMembership.toggleDelete($event, $element)"
+            >
+                <span class="minus-icon">-</span><span>멤버쉽 카드 제거</span>
+            </div>
+            <div class="col flex"
+                choose
+                toggle="true"
+                toggle-on-emit="addCardButtonStyleToggle"
+                ng-click="MainMembership.unsetDelete();
+                    MainMembership.addCardModal.show();"
+            >
+                <span class="plus-icon">+</span><span>멤버쉽 카드 추가</span>
+            </div>
+        </div>
+        
+    </ion-footer-bar>
+</ion-view>

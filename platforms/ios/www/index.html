@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="myFitMate">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+    <title></title>
+
+    <link href="css/ionic.app.min.css" rel="stylesheet">
+
+    <!-- Ionic/Angular core modules -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- Angular 3rd party modules -->
+    <script src="lib/angular-permission/dist/angular-permission.js"></script>
+
+    <!-- Cordova modules -->
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+    <script src="cordova.js"></script>
+
+    <!-- Confit and routes. -->
+    <script src="js/app.js"></script>
+    <script src="js/config/constant.js"></script>
+
+    <!-- Applicat Services-->
+    <script src="js/services/AuthService.js"></script>
+    <script src="js/services/GovernorService.js"></script>
+    <script src="js/services/LocalStorageService.js"></script>
+    <script src="js/services/PushService.js"></script>
+
+    <!-- Applicat Directives -->
+    <script src="js/directives/touchStyle.js"></script>
+
+    <!-- Applicat ViewModels/Controllers -->
+    <script src="indexController.js"></script>
+    <script src="states/main.js"></script>
+    <script src="states/video/video-controller.js"></script>
+    <script src="states/video/video-model.js"></script>
+
+</head>
+
+
+<body ng-controller="IndexController" class="platform-ios platform-cordova platform-webview">
+
+    <ion-nav-view>
+    </ion-nav-view>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<ion-nav-view id="announcement-modal-list">
+    <ion-content class="has-header">
+        <ion-list class="announcement-list">
+            <ion-item class="row flex-v announcement-item" 
+                collection-repeat="announcement in MainSetting.announcements"
+                touch
+                item-height="7.5%"
+                item-width="100%"
+                ng-click="MainSetting.announcementSection.goToDetail(announcement)"
+            >
+                <div class="col-10">
+                    <i class="announcement-icon"></i>
+                </div>
+                <div class="col-74 col-title">
+                    <span>
+                        {{ announcement.title }}
+                    </span>
+                </div>
+                <div class="col col-date">
+                    <span>
+                        {{ announcement.createdAt }}
+                    </span>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-nav-view>

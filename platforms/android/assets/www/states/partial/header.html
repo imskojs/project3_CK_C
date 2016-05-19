@@ -1,0 +1,46 @@
+<ion-header-bar id="main-header" class="bar-positive" align-title="center">
+    <!-- home -->
+    <div class="flex-v header-animate header-content-container"
+        ng-if="state.current === 'home'"
+    >
+        <button class="button button-icon icon ion-navicon"
+            ng-click="Main.toggleSideMenu()"
+            touch 
+        ></button>
+
+        <i class="barcode-icon" 
+            touch
+        ></i>
+
+        <div class="input-container flex">
+            <input type="text" placeholder="검색어를 입력하세요">
+            <div class="search-icon-container flex">
+                <i class="search-icon" 
+                    touch
+                ></i>
+            </div>
+        </div>
+
+        <i class="heart-icon" 
+            touch
+        ></i>
+    </div>
+
+    <!-- membership -->
+    <div class="flex-v header-animate header-content-container"
+        ng-if="state.current === 'membership'"
+    >
+        <button class="button button-icon icon ion-navicon"
+            ng-click="Main.toggleSideMenu()"
+            touch 
+        ></button>
+        <h2 class="title">내 멤버쉽 카드</h2>
+        
+    </div>
+
+
+
+
+
+</ion-header-bar>
+

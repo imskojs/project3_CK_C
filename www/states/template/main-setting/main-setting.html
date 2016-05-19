@@ -1,0 +1,91 @@
+<ion-view id="main-setting">
+    <ion-content class="has-header had-footer">
+        <div class="row main-icon-section">
+            <div class="col col-48 auto">
+                <i class="setting-main-icon"></i>
+            </div>
+        </div>
+
+        <div class="row list-section">
+            <div class="col">
+                <ul>
+                    <li class="row location-setting flex-v">
+                        <div class="col">
+                            <i class="target-icon"></i>
+                        </div>
+                        <div class="col-40 description-col">
+                            <span>위치설정</span>
+                        </div>
+                        <div class="col-10"
+                            ng-click="MainSetting.globalSetting.locationSetting = 'off'"
+                            ng-class="{selected: MainSetting.globalSetting.locationSetting === 'off'}"
+                        >
+                            <span class="off">꺼짐</span>
+                        </div>
+                        <div class="col-2">
+                            <span class="divider">/</span>
+                        </div>
+                        <div class="col-10 on-col"
+                            ng-click="MainSetting.globalSetting.locationSetting = 'on'"
+                            ng-class="{selected: MainSetting.globalSetting.locationSetting === 'on'}"
+                        >
+                            <span class="on">켜짐</span>
+                        </div>
+                    </li>
+                    <li class="row push-setting flex-v">
+                        <div class="col">
+                            <i class="push-icon"></i>
+                        </div>
+                        <div class="col-40 description-col">
+                            <span>푸쉬알람</span>
+                        </div>
+                        <div class="col-10"
+                            ng-click="
+                                MainSetting.globalSetting.pushSetting = 'off';
+                                MainSetting.toggleLocalNotification();
+                            "
+                            ng-class="{selected: MainSetting.globalSetting.pushSetting === 'off'}"
+                        >
+                            <span class="off">꺼짐</span>
+                        </div>
+                        <div class="col-2">
+                            <span class="divider">/</span>
+                        </div>
+                        <div class="col-10 on-col"
+                            ng-click="
+                                MainSetting.globalSetting.pushSetting = 'on';
+                                MainSetting.toggleLocalNotification();
+                            "
+                            ng-class="{selected: MainSetting.globalSetting.pushSetting === 'on'}"
+                        >
+                            <span class="on">켜짐</span>
+                        </div>
+                    </li>
+                    <li class="row annoucement flex-v"
+                        touch
+                        ng-click="MainSetting.announcementClickHandler();"
+                    >
+                        <div class="col">
+                            <i class="announcement-icon"></i>
+                        </div>
+                        <div class="col-40 description-col no-right-col">
+                            <span>공지사항</span>
+                        </div>
+                    </li>
+                    <li class="row send-email flex-v"
+                        touch
+                        ng-click="MainSetting.sendEmailClickHandler();"
+                    >
+                        <div class="col">
+                            <i class="message-icon"></i>
+                        </div>
+                        <div class="col-40 description-col no-right-col">
+                            <span>의견보내기</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </ion-content>
+
+</ion-view>

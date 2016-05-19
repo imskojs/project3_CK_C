@@ -1,0 +1,53 @@
+{
+  "name": "ngCordova",
+  "homepage": "http://ngCordova.com/",
+  "authors": [
+    "Max Lynch <max@drifty.com>",
+    "Paolo Bernasconi <paolo.enrico.bernasconi@gmail.com>",
+    "Chad Campbell <chad.campbell@ecofic.com>"
+  ],
+  "description": "AngularJS Cordova wrappers for common Cordova plugins.",
+  "main": [
+    "./dist/ng-cordova.js"
+  ],
+  "ignore": [
+    "**/.*",
+    "gulpfile.js",
+    "test",
+    "src",
+    "config",
+    "demo",
+    "CONTRIBUTING.md"
+  ],
+  "dependencies": {
+    "angular": ">= 1.2.23"
+  },
+  "keywords": [
+    "ngCordova",
+    "ng-cordova",
+    "ngcordova",
+    "ng cordova",
+    "cordova",
+    "phonegap",
+    "angular",
+    "angularjs",
+    "ionic",
+    "cordova plugin"
+  ],
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "angular": ">= 1.2.23",
+    "angular-mocks": ">= 1.2.23",
+    "jquery": "~2.1.1"
+  },
+  "_release": "536500ad37",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "536500ad378602513434e8df7faac64e76e51b6a"
+  },
+  "_source": "https://imskojs@bitbucket.org/zxshinxz/ngcordovakakaooauth.git",
+  "_target": "*",
+  "_originalSource": "https://imskojs@bitbucket.org/zxshinxz/ngcordovakakaooauth.git"
+}

@@ -1,0 +1,77 @@
+<ion-view id="main">
+    <ion-side-menus>
+        <ion-side-menu-content>
+
+            <ng-include 
+                src="'states/partial/header.html'" 
+            >
+            </ng-include>
+
+
+            <ion-nav-view name="main">
+            </ion-nav-view>
+
+            <ng-include
+                src="'states/partial/footer.html'"
+            >
+            </ng-include>
+
+        </ion-side-menu-content>
+        
+        <ion-side-menu side="left" class="side-menu">
+            <h1> {{ Main.user.email }}</h1>
+            <h2>환영합니다.</h2>
+            <ion-content class="side-content">
+                <ul>
+                    <li class="flex-v" 
+                        choose
+                        ng-click="goTo('main.home')"
+                        ng-class="{selected: state.current === 'home'}"
+                    >
+                        <i class="home"></i>
+                    </li>
+                    <li class="flex-v" 
+                        choose
+                        ng-class="{selected: state.current === 'myCard'}"
+                    >
+                        <i class="my-card"></i>
+                    </li>
+                    <li class="flex-v" 
+                        choose
+                        ng-click="goTo('main.membership')"
+                        ng-class="{selected: state.current === 'membership'}"
+                    >
+                        <i class="member-card"></i>
+                    </li>
+
+                    <li class="flex-v" 
+                        choose
+                        ng-class="{selected: state.current === 'setting'}"
+                    >
+                        <i class="settings"></i>
+                    </li>
+
+                    <li class="flex-v" 
+                        choose
+                        ng-class="{selected: state.current === 'favorite'}"
+                    >
+                        <i class="favorite"></i>
+                    </li>
+                    <li class="flex-v" 
+                        choose
+                        ng-class="{selected: state.current === 'share'}"
+                    >
+                        <i class="share"></i>
+                    </li>
+                </ul>
+            </ion-content>
+            <ion-footer-bar class="side-footer flex" touch>
+                <i class="log-out-icon"></i>
+            </ion-footer-bar>
+        </ion-side-menu>
+    
+    </ion-side-menus>
+
+
+
+</ion-view>

@@ -1,0 +1,71 @@
+<ion-view id="video-view">
+
+    <ion-header-bar align-title="center" class="bar-positive">
+        <div class="buttons">
+            <button class="button">Left Button</button>
+        </div>
+        
+        <h1 class="title">Title!</h1>
+
+        <div class="buttons">
+            <button class="button" ng-click="Video.play()">Right Button</button>
+        </div>
+    </ion-header-bar>
+
+
+    <ion-content class="">
+    
+        <div class="row">
+            <div class="col current-video-container" 
+                data-tap-disable="true">
+                <video class="current-video"
+                    type="video/mp4"
+                    current-video
+                    ctrl="Video"
+                    webkit-playsinline
+                    src="/sdcard/small.mp4"
+                    preload="metadata"
+                >
+                </video>
+            </div>
+        </div>
+        <div class="video-gallery">
+            <!-- Video title -->
+            <div class="row">
+                <div class="col mc"></div>
+                <div class="col video-title">
+
+                    {{ Video.currentVideo.title }}
+
+                </div>
+            </div>
+
+            <!-- Current video view -->
+
+            <!-- Video playlist -->
+            <div class="row">
+                <div class="col">
+                    <!-- Scroller -->
+                    <ion-scroll class="video-scroll"
+                        direction="x"
+                    >
+                    
+                        <div class="video-list flex">
+                            <div class="video-item"
+                                ng-repeat="video in Video.videoLists"
+                                ng-click="Video.test()"
+                            >
+
+                                {{ video.title }}
+
+                            </div>
+                        </div>
+                    
+                    </ion-scroll>
+                </div>
+            </div>
+        </div>
+        
+    </ion-content>
+
+</ion-view>

@@ -1,0 +1,62 @@
+<ion-view id="login">
+    <ion-pane style="height:100%;width:100%;">
+        <div class="row main-icon-section">
+            <div class="col auto col-50">
+                <i class="login-main-icon"></i>
+            </div>
+        </div>
+
+        <div class="row login-form-section">
+            <div class="col auto col-76">
+                <div class="login-form">
+                    <div class="row email-section">
+                        <div class="col col-9 flex">
+                            <i class="email-icon">
+                            </i>
+                        </div>
+                        <div class="col">
+                            <input type="email" placeholder="이메일주소" width="100%">
+                        </div>
+                    </div>
+                    <div class="row password-section">
+                        <div class="col col-9 flex">
+                            <i class="password-icon">
+                            </i>
+                        </div>
+                        <div class="col">
+                            <input type="password" placeholder="비밀번호">
+                        </div>
+                    </div>
+                    <div class="row login-button">
+                        <div class="col flex" touch>
+                            <span>
+                                로그인
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row member-join-section selected"
+            choose
+        >
+            <div class="col flex" 
+                touch
+                ng-click="Login.membershipModal.show();"
+            >
+                <span>아직회원이 아니신가요?</span>
+            </div>
+        </div>
+        <div class="row find-password-section"
+            choose
+        >
+            <div class="col auto flex" 
+                touch
+                ng-click="Login.passwordModal.show();"
+            >
+                <span>비밀번호 찾기</span>
+            </div>
+        </div>
+    </ion-pane>
+</ion-view>
